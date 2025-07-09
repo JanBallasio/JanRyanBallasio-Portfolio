@@ -479,6 +479,14 @@ function App() {
                 </div>
                 <div
                   className={`flex items-center gap-3 ${themeClasses.textSecondary} group hover:${themeClasses.text} transition-colors duration-300 cursor-pointer`}
+                  onClick={() => {
+                    const link = document.createElement('a');
+                    link.href = '/documents/CV_Ballasio.pdf';
+                    link.download = 'Jan_Ryan_Ballasio_Resume.pdf';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                  }}
                 >
                   <Download
                     className={`w-6 h-6 ${themeClasses.text} group-hover:scale-110 transition-transform duration-300`}
@@ -710,11 +718,7 @@ function App() {
               >
                 <div className="h-48 relative overflow-hidden">
                   <img
-                    src={
-                      project.type === "deployed"
-                        ? project.image
-                        : project.images![0]
-                    }
+                    src={project.images![0]}
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
