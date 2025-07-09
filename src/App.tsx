@@ -527,7 +527,7 @@ function App() {
                     Information and Communications Technology (Strand)
                   </h4>
                   <p className={`${themeClasses.text} font-medium text-lg`}>
-                    University Name • 2019-2021
+                    University of Baguio • 2019-2021
                   </p>
                   <p
                     className={`${themeClasses.textSecondary} mt-3 leading-relaxed`}
